@@ -69,7 +69,7 @@ const QuizApp: React.FC<QuizProps> = ({score, setScore, wrong, setWrong}) => {
         correctAnswer: 'Bir yapay zeka programı (AI)',
       },
     ],
-    // İhtiyaca göre daha fazla soru seti ekleyebilirsiniz
+   
   ];
 
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -121,13 +121,13 @@ const QuizApp: React.FC<QuizProps> = ({score, setScore, wrong, setWrong}) => {
 
   const handleNextQuestion = () => {
     setSelectedAnswer(null);
-    setTimer(30); // Soru değiştiğinde süreyi sıfırla
+    setTimer(30); 
     setShow(false)
 
     if (currentQuestion + 1 < allQuestions[currentSet].length) {
       setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       setShow(false)
-        // Bir sonraki soru varsa, sadece soruyu güncelle
+
     }
   
   };
